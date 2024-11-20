@@ -211,3 +211,64 @@ li{
     text-decoration: underline;
     
 }
+/* Estilos gerais para dispositivos menores */
+@media (max-width: 768px) {
+    header {
+        height: 200px; /* Diminui a altura do header */
+    }
+
+    header .overlay h1 {
+        font-size: 1.5rem; /* Reduz o tamanho do texto */
+    }
+
+    .titulo nav ul {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        gap: 10px; /* Reduz o espaço entre os links */
+        padding-left: 0;
+    }
+
+    .container {
+        flex-direction: column; /* Coloca os elementos em uma única coluna */
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%; /* Faz os cards ocuparem quase toda a largura */
+        margin: 0 auto; /* Centraliza os cards */
+    }
+
+    .zoomable {
+        max-width: 90%; /* Ajusta as imagens para caberem em telas menores */
+        margin: 0 auto; /* Centraliza as imagens */
+    }
+
+    .gif, .video {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .Episodio {
+        width: 90%;
+    }
+}
+
+/* Ajustes para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    h2, h3 {
+        font-size: 1.2rem; /* Ajusta o tamanho dos títulos */
+    }
+
+    p {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+    }
+
+    .titulo nav ul {
+        text-align: center;
+    }
+
+    iframe {
+        width: 100%; /* Garante que o vídeo seja responsivo */
+        height: auto;
+    }
+}
+

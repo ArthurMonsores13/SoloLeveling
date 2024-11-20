@@ -1,0 +1,213 @@
+body, h2, p, ul, h3, a {
+    margin: 0;
+    ;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1f1f3d;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    position: relative;
+    height: 390px; /* Altura do header */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse o limite do header */
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+    width: 100%; /* Garante que o vídeo ocupe toda a largura */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+header .overlay {
+    position: relative;
+    z-index: 1; /* Garante que o texto e outros conteúdos fiquem acima do vídeo */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    text-align: center;
+    width: 400px;
+    border: 1px solid #6495ED;
+    padding: 15px;
+    border-radius: 8px;
+    background: gray;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para zoom */
+.zoomable {
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.zoomable:hover {
+    transform: scale(1.2);
+}
+
+.gif {
+    padding-left: 500px;
+    width: 700px;
+}
+
+
+p {
+    font-size: 1rem;
+}
+.Episodio{
+    width: 400px;
+}
+h2 , h3 , p, a{
+    font-family: Popins;
+    font-size: 20px;
+}
+
+.cartao {
+    text-align: center;
+    width: 400px;
+    border: 1px solid  black;
+    
+    border-radius: 8px;
+    background: blue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    padding-left: 400px;
+}
+.video{
+    padding-left: 570px;
+    width: 500px;
+}
+#contato form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #contato input, #contato textarea, #contato button {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  #contato input:focus, #contato textarea:focus {
+    outline: none;
+    border-color: #ff6b6b;
+  }
+  
+  #contato button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #contato button:hover {
+    background-color: #e85b5b;
+  }
+    
+    .thumb {
+        background-size: cover; /* Faz a imagem cobrir toda a área */
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        background-position: center; /* Centraliza a imagem */
+        width: 300px; /* Define uma largura */
+        height: 200px; /* Define uma altura */
+        border: 2px solid #ddd; /* Opcional: Adiciona borda */
+        border-radius: 8px; /* Opcional: Bordas arredondadas */
+    }
+
+footer {
+    background: #222; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 1em 0;
+    font-size: 14px;
+}
+h2, h3 {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    font-family: 'Poppins', sans-serif; /* Garante que use a fonte Poppins */
+    font-size: 20px; /* Tamanho da fonte */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+}
+li{
+    color: black;
+}
+.car{
+    text-align: center;
+    width: 1300px;
+    border: 1px solid #6495ED;
+ padding-left: 10px;
+    border-radius: 8px;
+    background: gray;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+/* Estilo para o contêiner da navegação */
+.titulo nav ul {
+    display: flex; /* Alinha os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding-left: 740px;}
+
+.titulo nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Cor do texto dos links */
+    font-size: 1.1rem;
+    
+}
+
+.titulo nav ul li a:hover {
+    color: #ff6ec7; /* Cor vibrante no hover */
+    text-decoration: underline;
+    
+}

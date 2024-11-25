@@ -11,23 +11,35 @@
         <div id="thumb">
             <h1>Solo Leveling</h1>
             <nav>
-                
-                    <p><a href="./index.html">Início</a></p>
-                    <p><a href="#">Contato</a></p>
-              
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
             </nav>
         </div>
     </header>
-    <section id="contato" class="section">
-        <div class="container">
-            <form id="contactForm">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu Email" required>
-                <textarea placeholder="Sua Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
+    <main>
+        <section id="contato" class="section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form id="contactForm">
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" placeholder="Digite seu nome" required>
+                    
+                    <label for="email">Seu Email:</label>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                    
+                    <label for="message">Sua Mensagem:</label>
+                    <textarea id="message" placeholder="Digite sua mensagem" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Arthur Monsores. Todos os direitos reservados.</p>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
 </html>

@@ -1,274 +1,212 @@
-body, h2, p, ul, h3, a {
+/* Geral */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    ;
-    box-sizing: border-box;
-    color: white;
+    padding: 0;
+    color: #f4f4f4;
+    background-color: #1f1f3d;
+    line-height: 1.6;
+}
+
+a {
+    color: #ffd700;
     text-decoration: none;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #1f1f3d;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+a:hover {
+    text-decoration: underline;
 }
 
 header {
     position: relative;
-    height: 390px; /* Altura do header */
-    overflow: hidden; /* Impede que o conteúdo ultrapasse o limite do header */
+    width: 100%;
+    height: 400px; /* Ajuste o tamanho do header conforme necessário */
+    overflow: hidden;
 }
 
-header video {
+header .header-gif {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o vídeo */
-    width: 100%; /* Garante que o vídeo ocupe toda a largura */
-    height: auto; /* Ajusta a altura proporcionalmente */
-    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorcer */
 }
 
 header .overlay {
-    position: relative;
-    z-index: 1; /* Garante que o texto e outros conteúdos fiquem acima do vídeo */
-    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Filtro semitransparente para o texto se destacar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 3rem; /* Ajuste o tamanho da fonte conforme necessário */
     text-align: center;
-    padding: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header ul {
+
+/* Navegação */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #333;
+    margin: 0;
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
 }
 
-header a {
-    color: #fff;
-    text-decoration: none;
+nav ul li {
+    margin: 0 15px;
 }
 
+nav ul li a {
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e63946;
+}
+
+/* Seções */
 section {
-    padding: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
+section h2, section h3 , h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+/* Sinopse */
+#sinopse .car {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Galeria */
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 20px;
 }
 
 .card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
     text-align: center;
-    width: 400px;
-    border: 1px solid #6495ED;
-    padding: 15px;
-    border-radius: 8px;
-    background: gray;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
     transform: scale(1.05);
 }
 
-/* Estilo para zoom */
-.zoomable {
+.card img {
     width: 100%;
-    max-width: 250px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    height: 400px;
+    object-fit: cover;
 }
 
-.zoomable:hover {
-    transform: scale(1.2);
+.card p {
+    padding: 15px;
+    font-size: 0.9rem;
 }
 
+/* Poderes */
 .gif {
-    padding-left: 500px;
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    border-radius: 10px;
     width: 700px;
 }
 
-
-p {
-    font-size: 1rem;
-}
-.Episodio{
-    width: 400px;
-}
-h2 , h3 , p, a{
-    font-family: Popins;
-    font-size: 20px;
-}
-
-.cartao {
-    text-align: center;
-    width: 400px;
-    border: 1px solid  black;
-    
-    border-radius: 8px;
-    background: blue;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    padding-left: 400px;
-}
-.video{
-    padding-left: 570px;
-    width: 500px;
-}
-#contato form {
-    max-width: 500px;
-    margin: 0 auto;
+/* Trailer */
+.video {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  #contato input, #contato textarea, #contato button {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  #contato input:focus, #contato textarea:focus {
-    outline: none;
-    border-color: #ff6b6b;
-  }
-  
-  #contato button {
-    background-color: #ff6b6b;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #contato button:hover {
-    background-color: #e85b5b;
-  }
-    
-    .thumb {
-        background-size: cover; /* Faz a imagem cobrir toda a área */
-        background-repeat: no-repeat; /* Impede a repetição da imagem */
-        background-position: center; /* Centraliza a imagem */
-        width: 300px; /* Define uma largura */
-        height: 200px; /* Define uma altura */
-        border: 2px solid #ddd; /* Opcional: Adiciona borda */
-        border-radius: 8px; /* Opcional: Bordas arredondadas */
-    }
+    justify-content: center;
+    margin: 40px 0;
+}
 
+.video iframe {
+    border-radius: 10px;
+    border: 3px solid #ffd700;
+}
+
+/* Rodapé */
 footer {
-    background: #222; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
+    background-color: #333;
+    color: #f4f4f4;
     text-align: center;
-    padding: 1em 0;
-    font-size: 14px;
+    padding: 15px 0;
+    font-size: 0.9rem;
 }
-h2, h3 {
-    text-align: center; /* Centraliza o texto horizontalmente */
-    font-family: 'Poppins', sans-serif; /* Garante que use a fonte Poppins */
-    font-size: 20px; /* Tamanho da fonte */
-    margin: 20px 0; /* Espaçamento acima e abaixo */
-}
-li{
-    color: black;
-}
-.car{
-    text-align: center;
-    width: 1300px;
-    border: 1px solid #6495ED;
- padding-left: 10px;
-    border-radius: 8px;
-    background: gray;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-/* Estilo para o contêiner da navegação */
-.titulo nav ul {
-    display: flex; /* Alinha os itens horizontalmente */
-    gap: 20px; /* Espaçamento entre os itens */
-    list-style: none; /* Remove os marcadores de lista */
+
+footer p {
     margin: 0;
-    padding-left: 740px;}
-
-.titulo nav ul li a {
-    text-decoration: none;
-    color: #fff; /* Cor do texto dos links */
-    font-size: 1.1rem;
-    
 }
 
-.titulo nav ul li a:hover {
-    color: #ff6ec7; /* Cor vibrante no hover */
-    text-decoration: underline;
-    
-}
-/* Estilos gerais para dispositivos menores */
-@media (max-width: 768px) {
-    header {
-        height: 200px; /* Diminui a altura do header */
-    }
-
-    header .overlay h1 {
-        font-size: 1.5rem; /* Reduz o tamanho do texto */
-    }
-
-    .titulo nav ul {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        gap: 10px; /* Reduz o espaço entre os links */
-        padding-left: 0;
-    }
-
-    .container {
-        flex-direction: column; /* Coloca os elementos em uma única coluna */
-        gap: 15px;
-    }
-
-    .card {
-        width: 90%; /* Faz os cards ocuparem quase toda a largura */
-        margin: 0 auto; /* Centraliza os cards */
-    }
-
-    .zoomable {
-        max-width: 90%; /* Ajusta as imagens para caberem em telas menores */
-        margin: 0 auto; /* Centraliza as imagens */
-    }
-
-    .gif, .video {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .Episodio {
-        width: 90%;
-    }
+.car{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
-/* Ajustes para telas muito pequenas (smartphones) */
-@media (max-width: 480px) {
-    h2, h3 {
-        font-size: 1.2rem; /* Ajusta o tamanho dos títulos */
-    }
-
-    p {
-        font-size: 0.9rem; /* Reduz o tamanho do texto */
-    }
-
-    .titulo nav ul {
-        text-align: center;
-    }
-
-    iframe {
-        width: 100%; /* Garante que o vídeo seja responsivo */
-        height: auto;
-    }
+.car:hover {
+    transform: scale(1.05);
 }
 
+.car img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car p {
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+
+.carda {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius:15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.carda:hover {
+    transform: scale(1.05);
+}
+
+.carda img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.carda p {
+    padding: 15px;
+    font-size: 0.9rem;
+}

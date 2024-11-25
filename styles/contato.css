@@ -10,7 +10,10 @@ body {
     background: linear-gradient(135deg, #1b1b1b, #222222);
     color: #dcdcdc;
     line-height: 1.6;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh; /* Garante que a altura do corpo ocupe ao menos 100% da tela */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilizando o cabeçalho */
@@ -117,11 +120,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     font-size: 0.9rem;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: auto; /* Isso vai empurrar o footer para o final da tela */
 }
 
 /* Efeitos responsivos */
